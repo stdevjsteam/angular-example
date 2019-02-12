@@ -8,7 +8,7 @@ import {Customer, CustomersService} from '../services/customers.service';
 })
 
 export class CustomersListComponent {
-    customers: Observable<Customer[]>;
+    customers: Observable<Array<Customer>>;
 
     /** It's also possible to use async pipes with Observables, the angular will unsubscribe from it itself. */
     constructor(private customersService: CustomersService) {

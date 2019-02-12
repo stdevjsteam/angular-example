@@ -4,7 +4,7 @@ import {CommonModule} from '@angular/common';
 
 import {throwIfAlreadyLoaded} from './guards/module-import-guard';
 
-import {UserService, UserServiceConfig} from './user.service';
+import {UserService, UserServiceConfig} from './services/user.service';
 import {TitleComponent} from './components/title.component';
 
 /**

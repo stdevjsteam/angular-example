@@ -3,6 +3,7 @@ import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/rou
 import {EMPTY, Observable, of} from 'rxjs';
 import {ItemService} from './items.service';
 import {catchError, map} from 'rxjs/operators';
+import {ItemsServiceModule} from '../items-service.module';
 
 /**
  *One way to deal with getting and displaying data from an API is to route a user to a component,
@@ -14,7 +15,9 @@ import {catchError, map} from 'rxjs/operators';
  *There’s another way however using what’s known as a route resolver, which allows you to get data before navigating to the new route.
  *
  * */
-@Injectable()
+@Injectable({
+  providedIn: ItemsServiceModule
+})
 export class ResolveItemsListService implements Resolve<any> {
 
   constructor(private itemsService: ItemService) {

@@ -9,7 +9,7 @@ import {ActivatedRoute} from '@angular/router';
   templateUrl: './items-list.component.html'
 })
 export class ItemsListComponent implements OnInit {
-  items: Item[];
+  items: Array<Item>;
 
   constructor(private activatedRouter: ActivatedRoute) {
   }
