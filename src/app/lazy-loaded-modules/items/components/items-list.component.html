@@ -1,0 +1,4 @@
+<h3 appHighlight>Items List</h3>
+<div *ngFor='let item of items'>
+    <a routerLink="{{'../' + item.id}}">{{item.id}} - {{item.name}}</a>
+</div>
